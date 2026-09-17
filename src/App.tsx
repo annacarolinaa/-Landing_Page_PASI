@@ -55,7 +55,7 @@ function App() {
         <div className="hero-content">
 
           <h1>
-            a assistência social brasileira
+            a assistencia social brasileira
             <br />
             de cara nova. sem filas.
             <br />
