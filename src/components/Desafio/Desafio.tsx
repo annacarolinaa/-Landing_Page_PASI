@@ -15,8 +15,9 @@ function Desafio() {
   return (
     <section className="desafio">
       <div className="desafio-top"><div className="desafio-line"></div><div className="desafio-label">o desafio atual</div></div>
-      <div className="desafio-intro">
-        <h2>por que a triagem da assistência social <span>precisa evoluir?</span></h2>
+      <div className='colorwhite'>
+        <div className="desafio-intro">
+        <h2>por que a triagem da assistencia social <span>precisa evoluir?</span></h2>
         <p>As filas, a papelada e a falta de integração ainda dificultam o acesso a<br />quem mais precisa. Conheça alguns dos principais desafios.</p>
       </div>
       <div className="desafios-grid">
@@ -32,6 +33,8 @@ function Desafio() {
         <p>Tecnologia a favor das pessoas — simplificando a triagem, integrando os<br />serviços e colocando o atendimento humano no centro.</p>
         <a href="#projeto" className="cta-button">Conhecer o PASI <i className="fa-solid fa-arrow-right"></i></a>
       </div></div>
+      </div>
+      
     </section>
   );
 }

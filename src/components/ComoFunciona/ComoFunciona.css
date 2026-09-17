@@ -1,0 +1,934 @@
+/* =========================================
+   COMO FUNCIONA
+========================================= */
+
+.como-funciona {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #f8faff;
+
+  padding: 120px 0 0;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.como-funciona-header {
+  width: min(850px, 90%);
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(35px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.como-funciona-visible .como-funciona-header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* etiqueta */
+
+.section-tag {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 18px;
+
+  border-radius: 20px;
+
+  background: #e9f1ff;
+
+  color: #4081ed;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* título */
+
+.como-funciona-header h2 {
+  margin-top: 22px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: clamp(40px, 5vw, 62px);
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+
+  font-weight: 700;
+
+  color: #172d50;
+}
+
+.como-funciona-header h2 span {
+  color: #4081ed;
+}
+
+
+/* descrição */
+
+.como-funciona-header p {
+  margin-top: 18px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  color: #7c879b;
+}
+
+
+/* =========================================
+   ETAPAS
+========================================= */
+
+.etapas-container {
+  position: relative;
+
+  width: min(1160px, 90%);
+
+  margin: 105px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================================
+   LINHA
+========================================= */
+
+.etapas-line {
+  position: absolute;
+
+  left: 8%;
+  right: 8%;
+
+  top: 31px;
+
+  height: 2px;
+
+  background: #dce8fb;
+
+  z-index: 0;
+}
+
+.etapas-line-progress {
+  width: 0;
+
+  height: 100%;
+
+  background: #4081ed;
+
+  transition: width 2s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.como-funciona-visible .etapas-line-progress {
+  width: 100%;
+}
+
+
+/* =========================================
+   ETAPA
+========================================= */
+
+.etapa {
+  position: relative;
+
+  min-height: 365px;
+
+  padding: 0 15px;
+
+  opacity: 0;
+
+  transform: translateY(55px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+
+/* animação individual */
+
+.como-funciona-visible .etapa-1 {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: 0.2s;
+}
+
+.como-funciona-visible .etapa-2 {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: 0.45s;
+}
+
+.como-funciona-visible .etapa-3 {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: 0.7s;
+}
+
+.como-funciona-visible .etapa-4 {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: 0.95s;
+}
+
+
+/* =========================================
+   NÚMERO GIGANTE
+========================================= */
+
+.numero-fundo {
+  position: absolute;
+
+  top: -45px;
+  right: 10px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 145px;
+
+  line-height: 1;
+
+  font-weight: 700;
+
+  color: #edf3fc;
+
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   ÍCONE
+========================================= */
+
+.etapa-icon {
+  position: relative;
+
+  z-index: 2;
+
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 30px;
+
+  border-radius: 17px;
+
+  background: #edf4ff;
+
+  color: #4081ed;
+
+  font-size: 22px;
+
+  box-shadow: 0 5px 20px rgba(64, 129, 237, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.etapa:hover .etapa-icon {
+  transform: translateY(-5px) rotate(-3deg);
+
+  background: #4081ed;
+
+  color: white;
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.etapa-content {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 28px 25px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  border: 1px solid #e5edf9;
+
+  border-radius: 18px;
+
+  min-height: 260px;
+
+  box-shadow: 0 10px 30px rgba(40, 75, 130, 0.045);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.etapa:hover .etapa-content {
+  transform: translateY(-5px);
+
+  box-shadow: 0 15px 35px rgba(40, 75, 130, 0.08);
+}
+
+
+/* número */
+
+.etapa-numero {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  color: #4081ed;
+}
+
+
+/* título */
+
+.etapa-content h3 {
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 19px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  color: #20385f;
+}
+
+
+/* texto */
+
+.etapa-content p {
+  margin-top: 13px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.65;
+
+  color: #7b879b;
+}
+
+
+/* detalhe */
+
+.etapa-detalhe {
+  display: inline-flex;
+
+  margin-top: 22px;
+
+  padding: 8px 13px;
+
+  border-radius: 20px;
+
+  background: #edf4ff;
+
+  color: #4081ed;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.como-funciona-features {
+  width: min(1000px, 88%);
+
+  margin: 80px auto 95px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 40px;
+
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+
+  transition-delay: 1.25s;
+}
+
+.como-funciona-visible .como-funciona-features {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* feature */
+
+.feature {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+}
+
+
+/* ícone */
+
+.feature-icon {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #edf4ff;
+
+  color: #4081ed;
+
+  font-size: 16px;
+}
+
+
+/* texto */
+
+.feature div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.feature strong {
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  color: #263e64;
+}
+
+.feature span {
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 10px;
+
+  color: #8a96aa;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.como-funciona-cta {
+  position: relative;
+
+  width: calc(100% - 60px);
+
+  min-height: 300px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 50px 9%;
+
+  border-radius: 25px 25px 0 0;
+
+  background: #e7f0ff;
+
+  opacity: 0;
+
+  transform: translateY(40px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+
+  transition-delay: 1.5s;
+}
+
+.como-funciona-visible .como-funciona-cta {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   CTA TEXTO
+========================================= */
+
+.cta-text {
+  position: relative;
+
+  z-index: 3;
+
+  width: 45%;
+}
+
+.cta-text > span {
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  color: #4081ed;
+
+  letter-spacing: 0.5px;
+}
+
+.cta-text h3 {
+  margin-top: 10px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 30px;
+
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  color: #1d365d;
+}
+
+.cta-text p {
+  margin-top: 12px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  color: #71809a;
+}
+
+
+/* =========================================
+   BOTÕES DAS LOJAS
+========================================= */
+
+.cta-buttons {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.store-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 15px;
+
+  border-radius: 9px;
+
+  background: #1d365d;
+
+  color: white;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.store-button:hover {
+  transform: translateY(-2px);
+
+  background: #102746;
+}
+
+.store-button i {
+  font-size: 16px;
+}
+
+
+/* =========================================
+   VISUAL DO CELULAR
+========================================= */
+
+.cta-visual {
+  position: absolute;
+
+  left: 48%;
+
+  bottom: -100px;
+
+  width: 270px;
+
+  height: 410px;
+
+  display: flex;
+
+  justify-content: center;
+
+  transform: rotate(7deg);
+}
+
+
+/* telefone */
+
+.phone-decoration {
+  width: 190px;
+
+  height: 370px;
+
+  padding: 45px 20px 20px;
+
+  border: 8px solid #172d50;
+
+  border-radius: 32px;
+
+  background: white;
+
+  box-shadow: 12px 15px 30px rgba(35, 65, 110, 0.15);
+
+  position: relative;
+}
+
+
+/* câmera */
+
+.phone-top {
+  position: absolute;
+
+  top: 10px;
+  left: 50%;
+
+  width: 60px;
+  height: 17px;
+
+  transform: translateX(-50%);
+
+  border-radius: 20px;
+
+  background: #172d50;
+}
+
+
+/* logo */
+
+.phone-logo {
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  color: #172d50;
+
+  text-align: center;
+
+  margin-top: 30px;
+}
+
+
+/* título */
+
+.phone-title {
+  margin-top: 55px;
+
+  text-align: center;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.35;
+
+  font-weight: 600;
+
+  color: #263e64;
+}
+
+
+/* botão */
+
+.phone-button {
+  margin: 25px auto 0;
+
+  width: 110px;
+
+  padding: 9px;
+
+  border-radius: 8px;
+
+  background: #4081ed;
+
+  color: white;
+
+  text-align: center;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   ANOTAÇÃO
+========================================= */
+
+.cta-note {
+  position: absolute;
+
+  right: 8%;
+
+  top: 65px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #172d50;
+
+  transform: rotate(-4deg);
+}
+
+.cta-note i {
+  font-size: 22px;
+
+  transform: rotate(35deg);
+
+  color: #4081ed;
+}
+
+.cta-note span {
+  font-family: "Smooth Circulars", sans-serif;
+
+  font-size: 20px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .etapas-container {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 50px 20px;
+  }
+
+  .etapas-line {
+    display: none;
+  }
+
+  .como-funciona-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-visual {
+    left: 52%;
+  }
+
+  .cta-note {
+    right: 3%;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .como-funciona {
+    padding-top: 80px;
+  }
+
+  .como-funciona-header h2 {
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+  .como-funciona-header p br {
+    display: none;
+  }
+
+  .como-funciona-header p {
+    font-size: 13px;
+  }
+
+  .etapas-container {
+    grid-template-columns: 1fr;
+
+    width: 85%;
+
+    margin-top: 65px;
+  }
+
+  .etapa {
+    min-height: auto;
+
+    padding: 0;
+  }
+
+  .etapa-content {
+    min-height: 220px;
+  }
+
+  .numero-fundo {
+    font-size: 110px;
+
+    top: -25px;
+  }
+
+  .como-funciona-features {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px 15px;
+
+    margin-top: 65px;
+  }
+
+  .feature {
+    justify-content: flex-start;
+  }
+
+  .feature-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .feature strong {
+    font-size: 11px;
+  }
+
+  .feature span {
+    font-size: 9px;
+  }
+
+  .como-funciona-cta {
+    width: 100%;
+
+    min-height: 500px;
+
+    border-radius: 0;
+
+    padding: 45px 30px;
+
+    align-items: flex-start;
+  }
+
+  .cta-text {
+    width: 100%;
+  }
+
+  .cta-text h3 {
+    font-size: 27px;
+  }
+
+  .cta-text h3 br {
+    display: none;
+  }
+
+  .cta-text p br {
+    display: none;
+  }
+
+  .cta-visual {
+    left: 50%;
+
+    bottom: -190px;
+
+    transform: translateX(-50%) rotate(7deg);
+  }
+
+  .cta-note {
+    display: none;
+  }
+
+  .cta-buttons {
+    flex-wrap: wrap;
+  }
+
+}

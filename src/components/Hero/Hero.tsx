@@ -7,7 +7,7 @@ function Hero() {
         <div className="circle circle-1"></div><div className="circle circle-2"></div><div className="circle circle-3"></div>
       </div>
       <div className="hero-content">
-        <h1>a assistencia social brasileira<br />de cara nova. sem filas.<br /><span>sem papel.</span></h1>
+        <h1>a assistencia social brasileira de cara nova. sem filas. <span>sem papel.</span></h1>
         <div className="title-line"></div>
         <p className="hero-description">O PASI digitaliza a triagem e integra os atendimentos em um só lugar, tornando o acesso aos serviços públicos de assistência mais simples, humano e eficiente.</p>
         <div className="hero-buttons">

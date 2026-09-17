@@ -1,3 +1,4 @@
+import ComoFunciona from "./components/ComoFunciona/ComoFunciona";
 import Desafio from "./components/Desafio/Desafio";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Hero />
       <Desafio />
+      <ComoFunciona />
     </main>
   );
 }
