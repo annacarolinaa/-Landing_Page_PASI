@@ -1,0 +1,36 @@
+.header { width: 100%; position: relative; z-index: 10; }
+.header-content {
+  width: min(1170px, 90%); height: 95px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo { width: 132px; display: flex; align-items: center; }
+.logo img { width: 100%; height: auto; display: block; }
+.navigation { display: flex; align-items: center; gap: 42px; }
+.navigation a {
+  position: relative; font-size: 14px; font-weight: 500; color: #111; padding: 8px 0;
+}
+.navigation a.active { color: #0568dc; font-weight: 600; }
+.navigation a.active::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: #0568dc;
+}
+.download-button {
+  background: #4081ed; color: #fff; padding: 12px 23px; border-radius: 11px;
+  font-size: 13px; font-weight: 600; transition: 0.2s ease;
+}
+.download-button:hover { background: #2f70df; transform: translateY(-1px); }
+@media (max-width: 1000px) {
+  .header-content { width: 92%; }
+  .navigation { gap: 24px; }
+}
+@media (max-width: 800px) {
+  .header-content { height: auto; padding: 20px 0; flex-wrap: wrap; gap: 18px; }
+  .navigation { order: 3; width: 100%; justify-content: center; gap: 18px; }
+  .navigation a { font-size: 12px; }
+  .download-button { padding: 10px 16px; }
+}
+@media (max-width: 550px) {
+  .header-content { justify-content: center; }
+  .logo { width: 115px; }
+  .download-button { display: none; }
+  .navigation { overflow-x: auto; justify-content: flex-start; width: 100%; padding-bottom: 3px; }
+}

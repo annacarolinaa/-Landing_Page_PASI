@@ -1,0 +1,27 @@
+import "./Hero.css";
+
+function Hero() {
+  return (
+    <section className="hero">
+      <div className="hero-circles">
+        <div className="circle circle-1"></div><div className="circle circle-2"></div><div className="circle circle-3"></div>
+      </div>
+      <div className="hero-content">
+        <h1>a assistencia social brasileira<br />de cara nova. sem filas.<br /><span>sem papel.</span></h1>
+        <div className="title-line"></div>
+        <p className="hero-description">O PASI digitaliza a triagem e integra os atendimentos em um só lugar, tornando o acesso aos serviços públicos de assistência mais simples, humano e eficiente.</p>
+        <div className="hero-buttons">
+          <a href="#" className="primary-button"><i className="fa-solid fa-download"></i>Baixar o aplicativo</a>
+          <a href="#projeto" className="secondary-button">Saiba mais</a>
+        </div>
+      </div>
+      <div className="benefits">
+        <div className="benefit-card"><div className="benefit-icon heart"><i className="fa-solid fa-heart"></i></div><p><strong>Mais acesso e inclusão</strong><br />com uma gestão mais eficiente.</p></div>
+        <div className="benefit-card"><div className="benefit-icon people"><i className="fa-solid fa-people-group"></i></div><p><strong>Menos burocracia</strong> para o<br />cidadão em vulnerabilidade.</p></div>
+        <div className="benefit-card"><div className="benefit-icon care"><i className="fa-solid fa-hand-holding-heart"></i></div><p><strong>Mais clareza</strong> para<br />profissionais focarem no<br /><strong>atendimento</strong> humano.</p></div>
+      </div>
+    </section>
+  );
+}
+
+export default Hero;

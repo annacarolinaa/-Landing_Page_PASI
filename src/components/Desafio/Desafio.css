@@ -1,0 +1,23 @@
+.desafio { width: 100%; background: #fff; overflow: hidden; }
+.desafio-top { position: relative; width: 100%; height: 76px; display: flex; align-items: flex-end; justify-content: center; }
+.desafio-line { position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: #4081ed; }
+.desafio-label { position: relative; z-index: 2; width: 335px; height: 76px; display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid #4081ed; border-bottom: none; border-radius: 42px 42px 0 0; color: #4081ed; font-family: "Smooth Circulars", sans-serif; font-size: 28px; line-height: 1; }
+.desafio-intro { width: min(1100px, 90%); margin: 105px auto 0; text-align: center; }
+.desafio-intro h2 { margin: 0; font-family: "Smooth Circulars", sans-serif; font-size: clamp(31px, 3vw, 43px); font-weight: 400; line-height: 1.15; letter-spacing: -0.7px; color: #172944; }
+.desafio-intro h2 span { color: #4081ed; }
+.desafio-intro p { margin-top: 15px; font-size: 15px; font-weight: 400; line-height: 1.55; color: #7b8495; }
+.desafios-grid { width: min(1000px, 88%); margin: 78px auto 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px 20px; }
+.desafio-card { min-height: 172px; padding: 25px 22px; background: #fff; border: 1px solid #e9eef7; border-radius: 14px; box-shadow: 0 8px 25px rgba(30, 65, 120, 0.045); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.desafio-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(30, 65, 120, 0.08); }
+.desafio-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; border-radius: 9px; background: #edf4ff; color: #4081ed; font-size: 16px; }
+.desafio-card h3 { margin: 0 0 10px; font-size: 14px; line-height: 1.3; font-weight: 700; color: #34527f; }
+.desafio-card p { margin: 0; font-size: 11.5px; line-height: 1.55; font-weight: 400; color: #8a96aa; }
+.desafio-cta { width: 100%; margin-top: 63px; min-height: 240px; display: flex; align-items: center; justify-content: center; background: #4081ed; }
+.cta-content { text-align: center; padding: 45px 20px; }
+.cta-content h2 { margin: 0; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 29px; line-height: 1.2; font-weight: 700; color: #fff; }
+.cta-icon { width: 35px; height: 35px; display: inline-flex; align-items: center; justify-content: center; border-radius: 7px; background: rgba(255, 255, 255, 0.18); font-size: 17px; }
+.cta-content p { margin: 12px auto 0; font-size: 14px; line-height: 1.55; font-weight: 400; color: rgba(255, 255, 255, 0.82); }
+.cta-button { width: 205px; height: 44px; margin: 18px auto 0; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 10px; background: #fff; color: #4081ed; font-size: 12px; font-weight: 700; transition: 0.2s ease; }
+.cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12); }
+@media (max-width: 900px) { .desafios-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .desafio-top { height: 62px; } .desafio-label { width: 230px; height: 62px; font-size: 21px; } .desafio-intro { margin-top: 70px; } .desafio-intro h2 { font-size: 28px; } .desafio-intro p { font-size: 13px; } .desafio-intro p br, .cta-content p br { display: none; } .desafios-grid { grid-template-columns: 1fr; margin-top: 50px; } .desafio-card { min-height: 150px; } .cta-content h2 { font-size: 23px; } .cta-content p { font-size: 12px; } }
