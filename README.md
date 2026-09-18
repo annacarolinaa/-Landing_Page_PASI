@@ -1,6 +1,34 @@
-# React + TypeScript + Vite
+# PASI - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site publicado em: https://annacarolinaa.github.io/-Landing_Page_PASI/
+
+## Desenvolvimento local
+
+```bash
+npm install
+npm run dev
+```
+
+## Deploy no GitHub Pages
+
+O deploy acontece automaticamente a cada push na branch `Redesign`, usando o workflow em `.github/workflows/deploy.yml`.
+
+No GitHub, abra `Settings > Pages` e selecione `GitHub Actions` como fonte de publicação. Depois, faça push das alterações:
+
+```bash
+git push origin Redesign
+```
+
+Para gerar e testar a versão de produção localmente:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Stack
+
+React, TypeScript e Vite.
 
 Currently, two official plugins are available:
 
