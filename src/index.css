@@ -25,3 +25,37 @@ a { text-decoration: none; color: inherit; }
   overflow: hidden;
   background: #f7f9fd;
 }
+
+.visual-stage {
+  position: relative;
+  isolation: isolate;
+  background: #f8faff;
+}
+
+.visual-stage-video,
+.visual-stage-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh + 48px);
+  pointer-events: none;
+}
+
+.visual-stage-video {
+  z-index: 0;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.visual-stage-overlay {
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(10, 31, 51, 0.9) 0%, rgba(10, 31, 51, 0.64) 52%, rgba(10, 31, 51, 0.3) 100%), linear-gradient(180deg, rgba(10, 31, 51, 0.15) 0%, rgba(10, 31, 51, 0.48) 100%);
+}
+
+.visual-stage > .header,
+.visual-stage > .hero,
+.visual-stage > .desafio {
+  position: relative;
+  z-index: 2;
+}
